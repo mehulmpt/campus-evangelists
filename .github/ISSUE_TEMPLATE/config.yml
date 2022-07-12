@@ -1,0 +1,91 @@
+name: Event Support Request
+description: Let us know about your upcoming events!
+title: "[Event Support]: "
+labels: ["support", "triage"]
+assignees:
+  - aaishikasb
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Glad to see you here! Fill out this form, truest to your knowledge and we'll get back to you shortly after submission.
+  - type: input
+    id: email
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: true
+  - type: input
+    id: event-name
+    attributes:
+      label: Event Name
+      description: What do we call your event?
+      placeholder: ex. Codefest 2022
+    validations:
+      required: true
+  - type: input
+    id: event-organizer
+    attributes:
+      label: Name of the Organization
+      description: Who is organizing the event? Add the name of the Club/Community/Organization.
+      placeholder: ex. Codedamn Campus Community Bangalore
+    validations:
+      required: true
+  - type: textarea
+    id: event-info
+    attributes:
+      label: Sponsorship Prospectus
+      description: Also tell us everything about the event! Make sure you mention the prospective dates for the same.
+      placeholder: HackFest is a 48-hour long hackathon wherein you have to put on your hacker hats and build anything that falls in either or both the domain of full-stack web development (the stack we learn in full-stack web developer roadmap on codedamn).
+    validations:
+      required: true
+  - type: dropdown
+    id: event-type
+    attributes:
+      label: Type of Event
+      description: In which domain does this event fall? If it's not included here, please choose "Other".
+      options:
+        - Hackathon
+        - Workshop
+        - Competitive Coding
+        - Webinar
+        - Other
+    validations:
+      required: true
+ - type: checkboxes
+    id: ce-organizer
+    attributes:
+      label: Involvement
+      description: Are you one of the organizers of the event?
+      options:
+        - label: Yes
+        - label: No
+          required: true
+  - type: dropdown
+    id: type-of-support
+    attributes:
+      label: What are you requesting?
+      multiple: true
+      options:
+        - Stickers
+        - T-shirts
+        - Vouchers
+        - Speakers
+    validations:
+      required: true
+  - type: textarea
+    id: why-sponsor
+    attributes:
+      label: Why should we sponsor the event?
+      description: Help us out with why you think we should be a partner of the event.
+      
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree that you have submitted all the details truest to your knowledge, acknowledging that this is a real event.
+      options:
+        - label: I agree that this a real event and all the details are accurate.
+          required: true
